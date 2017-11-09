@@ -139,18 +139,18 @@ footer a:hover {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
-            "enlg enlg . ."
             "enlg enlg zen zen"
+            "enlg enlg . ."
             "enlg enlg sm sm"
-            "enlg enlg sm sm"
+            "enlg enlg . ."
     }
     .preamble {
         grid-area: enlg;
-            margin-top: 1em;
+        margin-top: 1em;
     margin-left: 2em;
-    width: 280px;
-    overflow: scroll;
+        background: transparent url(images/lady.png) no-repeat top left;
     }
+
     header {
         position: relative;
         grid-area: zen;
@@ -163,7 +163,7 @@ footer a:hover {
     }
     #zen-intro h1 {
         grid-area: hed1;
-        margin-top: -2.5em;
+        margin-top: -0.5em;
         color: #c68787;
         font-size: 3.7em;
         text-shadow: 0 2px 2px #000;
@@ -171,16 +171,39 @@ footer a:hover {
     #zen-intro h2 {
         font-size: 1.4em;
         position: absolute;
+        width: 80px;
+        height: 80px;
+        left: 0;
+        grid-area: hed2;
+        text-align: left;
+        padding: 7.5px;
+        color: #728FCE;
+        margin-top: 6.5em;
+        background: transparent url(images/flower.png) no-repeat top left;
+
+        text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+    }
+
+    #zen-intro h2:hover {
+        font-size: 1.4em;
+        position: absolute;
         width: 50%;
         left: 0;
         grid-area: hed2;
         text-align: left;
-        padding:7.5px;
+        padding: 7.5px;
         color: #728FCE;
-        /*text-shadow: 0 0 10px #F6D781;*/
+        margin-top: 6.5em;
+        text-indent: 0%;
+	white-space:normal;
+	overflow: show;
+        background:none;
     }
     .summary {
-        margin-top: -0.1em;
+        opacity:1;
+        margin-top: 5em;
         grid-area: sm;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -276,10 +299,21 @@ footer a:hover {
             "ben ben req req"
             "foot foot req req"
     }
+
+    .explanation h3,
+    .preamble h3,
+    .participation h3,
+    .benefits h3,
+    .requirements h3{
+opacity: 0;
+        }
+
+
     .explanation {
         grid-area: ex;
         width: 100%;
         margin-left: 2em;
+        background: transparent url(images/zen.png) no-repeat top left;
     }
     .participation {
         grid-area: par;
@@ -289,6 +323,7 @@ footer a:hover {
         margin-left: 2em;
         width:300px;
         margin-top: 1em;
+        background: transparent url(images/icon.png) no-repeat top right;
     }
     .participation p,
     .explanation p,
@@ -355,6 +390,7 @@ footer a:hover {
         padding-left:1.5em;
             padding-right:1.5em;
         color: #3EA99F;
+        opacity: 1;
     }
     .preamble h3,
     .explanation h3,
@@ -366,6 +402,7 @@ footer a:hover {
         grid-area: ben;
         width: 100%;
     margin-left: 2em;
+        background: transparent url(images/drop.png) no-repeat top left;
     }
     .requirements {
         grid-area: req;
@@ -375,6 +412,7 @@ footer a:hover {
         height: 300px;
         margin-left: 0;
         overflow: scroll;
+        background: transparent url(images/yoga.png) no-repeat top right;
     }
     .requirements h3,
     .participation h3 {
@@ -391,11 +429,19 @@ footer a:hover {
     footer a {
         display: inline-block;
         width: calc(90% / 5 - 20px);
-        border-radius: 30% 0 30% 30%;
+        /*border-radius: 30% 0 30% 30%;*/
         float: left;
         margin-left: 1em;
+        border: none;
         box-shadow: 1px 1px 1px white;
+        background: transparent url(images/stone3.png) no-repeat top left;
     }
+    footer a:hover {
+    transition: all 0.7s;
+    background: transparent url(images/stone4.png) no-repeat top left;
+    font-size: 1em;
+    text-decoration: none;
+}
 
 }
     @keyframes text-move {
@@ -457,9 +503,6 @@ footer a:hover {
 .design-name {
     text-transform: uppercase;
 }
-/*nav ul li a:first-child {
-    display: block;
-}*/
 .design-selection nav ul li a:last-child::after {
     content: " ›";
 }
