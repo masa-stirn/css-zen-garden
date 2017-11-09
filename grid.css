@@ -163,53 +163,44 @@ footer a:hover {
     }
     #zen-intro h1 {
         grid-area: hed1;
-        margin-top: -0.5em;
-        color: #c68787;
+        color: #f9bbac;
         font-size: 3.7em;
         text-shadow: 0 2px 2px #000;
+        margin-top: -0.3em;
     }
+
+
+
     #zen-intro h2 {
         font-size: 1.4em;
         position: absolute;
-        width: 80px;
-        height: 80px;
+        width: 100%;
         left: 0;
         grid-area: hed2;
-        text-align: left;
+        text-align: center;
         padding: 7.5px;
         color: #728FCE;
-        margin-top: 6.5em;
-        background: transparent url(images/flower.png) no-repeat top left;
+        margin-top: 11em;
+    }
+    .summary {
 
-        text-indent: 100%;
+        grid-area: sm;
+
+    background: transparent url(images/flower.png) no-repeat top center;
+        height:80px;
+    text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
     }
-
-    #zen-intro h2:hover {
-        font-size: 1.4em;
-        position: absolute;
-        width: 50%;
-        left: 0;
-        grid-area: hed2;
-        text-align: left;
-        padding: 7.5px;
-        color: #728FCE;
-        margin-top: 6.5em;
-        text-indent: 0%;
-	white-space:normal;
-	overflow: show;
-        background:none;
-    }
-    .summary {
-        opacity:1;
-        margin-top: 5em;
-        grid-area: sm;
-        display: grid;
+        /*display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             ". p1"
             "p2 p1"
+    }
+    .summary:hover{
+        opacity:1;
+         margin-top: -12em;
     }
     #zen-summary p:first-child {
         grid-area: p1;
@@ -220,6 +211,19 @@ footer a:hover {
         grid-area: p2;
         color: black;
         text-shadow: none;
+    }*/
+
+    .summary:hover{
+        opacity:1;
+        margin-top: 4em;
+        background: none;
+        height:180px;
+        width: 240px;
+    text-indent: 0%;
+	white-space: normal;
+	overflow: show;
+        text-align: center;
+        margin-left: 3em;
     }
     #zen-summary a {
         color: #728FCE;
@@ -305,7 +309,7 @@ footer a:hover {
     .participation h3,
     .benefits h3,
     .requirements h3{
-opacity: 0;
+        opacity: 0;
         }
 
 
@@ -320,10 +324,9 @@ opacity: 0;
         height: 320px;
         overflow: scroll;
         text-align: right;
-        margin-left: 2em;
-        width:300px;
+        width:100%;
         margin-top: 1em;
-        background: transparent url(images/icon.png) no-repeat top right;
+        background: transparent url(images/jinjan.png) no-repeat top right;
     }
     .participation p,
     .explanation p,
@@ -392,6 +395,10 @@ opacity: 0;
         color: #3EA99F;
         opacity: 1;
     }
+     .requirements:hover h3,
+    .explanation:hover h3{
+        color: #fd9775}
+
     .preamble h3,
     .explanation h3,
     .benefits h3 {
