@@ -1,0 +1,469 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti');
+
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script');
+
+body {
+    background-image: url(images/zen-bg4.jpg);
+    background-position: 100% 100%;
+    background-size: cover;
+    padding: 0.5em;
+    width: 100%;
+}
+h1 {
+    font-family: 'Calligraffitti', cursive;;
+    /*font-family: Optima, Segoe, 'Segoe UI', Belleza, Candara, Calibri, Arial, sans-serif;*/
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 300;
+    color: #728FCE;
+    text-shadow: 0 1px 1px lightblue;
+    margin-top: 2.5em;
+    margin-bottom: 0.6em;
+}
+h2,
+h3 {
+    color: #728FCE;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 200;
+    font-style: normal;
+    text-shadow: 0 0 1px #fff;
+    padding: 0.5em;
+}
+p,
+li {
+    color: black;
+    padding: 0.5em;
+    font-family: Optima, Segoe, 'Segoe UI', Belleza, Candara, Calibri, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+}
+a {
+
+    font-family: Optima, Segoe, 'Segoe UI', Belleza, Candara, Calibri, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+div {
+    margin-bottom: 1em;
+}
+section div {
+    margin-bottom: 1.5em;
+}
+.summary a {
+    color: skyblue;
+    text-shadow: 0 1px 1px #fff;
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    opacity: 0.8;
+    height: 10%;
+}
+footer a {
+    display: inline-block;
+    background: #728FCE;
+    padding: 0.75em;
+    border: 1px solid white;
+    border-radius: 20% 0 20% 20%;
+    color: white;
+    font-family: Optima, Segoe, 'Segoe UI', Belleza, Candara, Calibri, Arial, sans-serif;
+    text-shadow: 0 0 10px #000;
+    text-decoration: none;
+}
+footer a:hover {
+    transition: all 0.7s;
+    background: #728Fff;
+    font-size: 1em;
+    text-decoration: none;
+}
+@media screen and (min-width: 500px) and (max-width: 1200px) {
+    .page-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "sec mn"
+            "wra mn"
+            "wra mn"
+            "wra mn"
+    }
+    section {
+        grid-area: sec;
+            width: 90%;
+    padding-left: 1em;
+    }
+    .main {
+        margin-top: 7em;
+        grid-area: mn;
+            width: 90%;
+    }
+    aside {
+        grid-area: wra;
+            width: 90%;
+    padding-left: 1em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+       /* background: url(images/golden_spiral_2355x1542.jpg);*/
+         background-image: url(images/zen-bg2.jpg);
+        background-size: cover;
+        background-position: 0 0;
+        z-index:-1:
+    }
+    .intro {
+        position: absolute;
+        padding: 1em;
+        width: 50vw;
+        left: 0;
+        top: 0;
+        height: 400px;
+        grid-area: intr;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "enlg enlg . ."
+            "enlg enlg zen zen"
+            "enlg enlg sm sm"
+            "enlg enlg sm sm"
+    }
+    .preamble {
+        grid-area: enlg;
+            margin-top: 1em;
+    margin-left: 2em;
+    width: 280px;
+    overflow: scroll;
+    }
+    header {
+        position: relative;
+        grid-area: zen;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 70px;
+        grid-template-areas:
+            "hed1 hed1"
+            "hed2 hed2"
+    }
+    #zen-intro h1 {
+        grid-area: hed1;
+        margin-top: -2.5em;
+        color: #c68787;
+        font-size: 3.7em;
+        text-shadow: 0 2px 2px #000;
+    }
+    #zen-intro h2 {
+        font-size: 1.4em;
+        position: absolute;
+        width: 50%;
+        left: 0;
+        grid-area: hed2;
+        text-align: left;
+        padding:7.5px;
+        color: #728FCE;
+        /*text-shadow: 0 0 10px #F6D781;*/
+    }
+    .summary {
+        margin-top: -0.1em;
+        grid-area: sm;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            ". p1"
+            "p2 p1"
+    }
+    #zen-summary p:first-child {
+        grid-area: p1;
+        color: black;
+        text-shadow: none;
+    }
+    #zen-summary p:last-child {
+        grid-area: p2;
+        color: black;
+        text-shadow: none;
+    }
+    #zen-summary a {
+        color: #728FCE;
+        text-decoration: underline;
+    }
+    .sidebar {
+        display: grid;
+    }
+    .wrapper {
+        padding: 1em;
+        padding-top: 0.5em;
+        height: 350px;
+        position: absolute;
+        width: 30vw;
+        left: 50vw;
+        top:0;
+        overflow: hidden;
+        grid-area: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       grid-template-areas:
+            "loc1 loc1"
+            "loc1 loc1"
+            "loc3 loc2"
+    }
+
+    .design-selection {
+        grid-area: loc1;
+        overflow: visible;
+        animation: text-move2 45s linear infinite reverse;
+        width: 100%;
+
+    }
+    .design-selection:hover, .design-archives:hover, .zen-resources:hover  {
+        animation-play-state: paused;
+    }
+    .design-archives {
+        grid-area: loc2;
+        overflow: visible;
+        animation: text-move 48s linear infinite reverse;
+        width: 60%;
+        height: 50%;
+        margin-top: 22%;
+    }
+    .zen-resources {
+        grid-area: loc3;
+        overflow: visible;
+        animation: text-move 48s linear infinite reverse;
+        width: 66%;
+        height: 50%;
+        margin-top: 40%;
+    }
+    .zen-resources h3 {
+        padding-top:0;
+        margin-top: -1em;
+    }
+
+    .design-selection h3, .design-archives h3, .zen-resourcesh3 {
+        text-align: left;
+    }
+
+    div {
+        margin-bottom: 0;
+    }
+    li{
+        padding-bottom: 0;
+    }
+    .main {
+        padding-left: 1em;
+        padding-right: 1em;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            ". . . par"
+            "ex ex req req"
+            "ben ben req req"
+            "foot foot req req"
+    }
+    .explanation {
+        grid-area: ex;
+        width: 100%;
+        margin-left: 2em;
+    }
+    .participation {
+        grid-area: par;
+        height: 320px;
+        overflow: scroll;
+        text-align: right;
+        margin-left: 2em;
+        width:300px;
+        margin-top: 1em;
+    }
+    .participation p,
+    .explanation p,
+    .benefits p,
+    .requirements p {
+        display: none;
+    }
+    .preamble p {
+        color: transparent;
+        text-shadow: none;
+    }
+    .participation a,
+    .explanation a,
+    .benefits a, .requirements a,
+    .preamble a {
+        color: #728FCE;
+        text-decoration: underline;
+    }
+    .participation:hover,
+    .explanation:hover,
+    .benefits:hover,
+    .requirements:hover,
+    .preamble:hover{
+        cursor: context-menu;
+        background: white;
+        color: white;
+        z-index: 100;
+        box-shadow: 0px 0px 15px 25px #fff;
+        animation: animatebox 1.5s linear;
+        padding: 3em;
+    }
+
+    .participation:hover{
+        margin-left: -100%;
+        width: 200%;
+    }
+
+    .benefits:hover{
+        margin-top: 0;
+        height: 110%;
+    }
+
+    .preamble:hover{
+        width: 200%;
+    }
+
+    .participation:hover p,
+    .explanation:hover p,
+    .benefits:hover p,
+    .requirements:hover p,
+    .preamble:hover p
+    {
+        display: block;
+        color: black;
+        text-shadow: none;
+        padding-left:2.5em;
+        padding-right:2.5em;
+    }
+    .explanation:hover h3,
+    .requirements:hover h3,
+    .benefits:hover h3,
+    .participation:hover h3,
+    .preamble:hover h3 {
+        padding-left:1.5em;
+            padding-right:1.5em;
+        color: #3EA99F;
+    }
+    .preamble h3,
+    .explanation h3,
+    .benefits h3 {
+        text-align: left;
+    }
+
+    .benefits {
+        grid-area: ben;
+        width: 100%;
+    margin-left: 2em;
+    }
+    .requirements {
+        grid-area: req;
+        text-align: right;
+        overflow: scroll;
+        width: 100%;
+        height: 300px;
+        margin-left: 0;
+        overflow: scroll;
+    }
+    .requirements h3,
+    .participation h3 {
+        text-align: right;
+    }
+    footer {
+        grid-area: foot;
+        position: static;
+        margin-top: 5em;
+        height: 20%;
+        background-color: transparent;
+        width: 100%;
+    }
+    footer a {
+        display: inline-block;
+        width: calc(90% / 5 - 20px);
+        border-radius: 30% 0 30% 30%;
+        float: left;
+        margin-left: 1em;
+        box-shadow: 1px 1px 1px white;
+    }
+
+}
+    @keyframes text-move {
+            from {
+                transform: translateY(-250%);
+            }
+            to {
+                transform: translateY(150%);
+            }
+    }
+
+@keyframes text-move2 {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(99%);
+            }
+    }
+
+@keyframes animatebox {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+        }
+    100% {
+        opacity: 1;
+    }
+    }
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+	}
+	50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-4%);
+	}
+	80%{
+		transform: translateX(4%);
+	}
+	95%{
+		transform: translateX(-2%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+.viewall a::after {
+    content: "›";
+}
+.zen-resources a::after {
+    content: "›";
+}
+.design-name {
+    text-transform: uppercase;
+}
+/*nav ul li a:first-child {
+    display: block;
+}*/
+.design-selection nav ul li a:last-child::after {
+    content: " ›";
+}
+
+a:hover {
+  text-decoration: underline;
+}
